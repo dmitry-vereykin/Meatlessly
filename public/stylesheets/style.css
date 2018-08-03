@@ -1035,7 +1035,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   #pledge-now .styled-select select {
-    width: $select-width-sm;
+    width: 293px;
   }
 }
 @media (min-width: 992px) {
@@ -1066,7 +1066,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   #pledge-now .styled-select {
-    width: $select-width-sm -28px;
+    width: 265px;
   }
 }
 @media (min-width: 992px) {
