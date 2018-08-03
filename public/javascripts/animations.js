@@ -1,4 +1,6 @@
 factsButtonUnroll();
+var finished = true;
+var animateCount = -1;
 animateTitle();
 
 function factsButtonUnroll() {
@@ -38,8 +40,6 @@ function scrollableElement(els) {
     return [];
 }
 
-var finished = true;
-var animateCount = -1;
 function animateTitle() {
     //Use green sock or add display none here to make sure starting from none displayed.
     if (finished) {
