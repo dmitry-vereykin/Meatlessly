@@ -1,0 +1,722 @@
+$manilla = #e8e4db
+$green = #869c30
+$dark-green = #5e6d22
+$orange = orange
+$grey = #868079
+
+$white-noise = url(../images/design/lightBackground.png)
+$manilla-noise = url(../images/design/mainBackground.png)
+$dotted-green = url(../images/design/TopNavBackground.png)
+$dotted-dark-green = url(../images/design/darkgreenborder.png)
+$green-bullet = url(../images/design/green-bullet.png)
+$select-arrow = url(../images/design/select-arrow.png)
+$sinusoidal = url(../images/design/sinusoidal-art.png)
+$sinusoidal-flip = url(../images/design/sinusoidal-art-flip.png)
+$section-flag-header-left = url(../images/design/section-flag-header-left.png)
+$section-flag-header-center = url(../images/design/section-flag-header-center.png)
+
+
+body
+    font-size 16px
+    background-image $manilla-noise
+
+//  ----------------TYPOGRAHPY-------------------
+h1, h2, h3
+    font-family:'FuturaW01-BoldCondensed 774890';
+    text-transform:uppercase;
+h2,h3
+    color $green
+
+h4
+    font-family:'Myriad W01 Bd';
+    text-transform:uppercase;
+    color $grey
+
+.highlight, blockquote
+    font-family:'Myriad W01 Bd';
+    color $green
+    line-height:1.2em;
+    text-transform:uppercase;
+ul
+    list-style-image $green-bullet
+
+$h1xxs = 38px
+$h1xs = 67px
+$h1sm = 87px
+$h1md = 118px
+$h1lg = 146px
+html h1, #pledge-now .inking figure h3
+    font-size $h1xxs;
+    @media (min-width: 520px)
+        font-size $h1xs
+    @media (min-width: 768px)
+        font-size $h1sm
+    @media (min-width: 992px)
+        font-size $h1md
+    @media (min-width: 1200px)
+        font-size $h1lg
+body
+    @media (min-width: 520px)
+        font-size 16px
+    @media (min-width: 992px)
+        font-size 18px
+
+a:hover
+    color $orange
+
+//   ---------------- HEADER ----------------------- 
+//[data-animate~=title]
+//    display none
+
+@media (min-width: 992px)
+    span.no-animate
+        display none!important
+
+#outerHeaderWrapper
+    background:center no-repeat;
+    background-image:url(../images/design/lettuceHeaderSharp.png);
+
+#goforth
+    color:white;
+    font-family:'FuturaW01-BoldCondensed 774893';
+    font-size:.32em;
+    margin-top 5px
+    margin-left -10px
+
+#org
+    color:#869c30;
+    font-size: .65em;
+
+div.mobile-container
+    display block
+    margin 0 auto
+    width 320px
+    padding 0
+    overflow hidden
+header
+    background url(../images/design/lettuceHeaderDark.png) -200px;
+    color white
+    div.container, div.mobile-container
+        position relative
+        padding 0
+        margin 0 auto
+    h1
+        display inline-block;
+        margin-top -5px
+        float left
+    #logo
+        height 100px
+        width 100px
+        margin-left -6px
+        float left
+    @media (min-width: 520px)
+        div.mobile-container
+            width 520px
+            position relative
+        #logo
+            display:inline-block
+            height:150px;
+            width:150px;
+            margin-left -18px
+        h1
+            margin-top:-7px
+            line-height .75em
+        #goforth
+            display inline-block
+    @media (min-width: 768px)
+        div.mobile-container
+            width 100%;
+        #outerHeaderWrapper
+            height:233px;
+        #logo
+            margin-left -25px /* Makes up for Logo mostly whitespace */
+            height:233px;
+            width:233px;
+        h1
+            line-height .8em
+            margin-top 10px
+        #goforth
+            font-size .25em;
+            margin-left -15px
+    @media (min-width: 992px)
+        #logo
+            height:280px;
+            width:280px;
+        #outerHeaderWrapper
+            height:275px;
+        h1
+            line-height .7em
+            margin-top 5px
+    @media (min-width: 1200px)
+        h1
+            margin-top -25px
+
+//ANIMATION
+[data-animate=title-1],
+[data-animate=title-2],
+[data-animate=title-3] {
+    display:none;
+    position:absolute;
+}
+animate(x offset)
+    [data-animate=title-1]
+        left 240px * (x / 146) + offset
+        .animated
+            left:345px * (x / 146) + offset
+    [data-animate=title-2]
+        left 470px * (x / 146) + offset
+        margin-top -10px
+        padding-top 10px
+        overflow:hidden;
+        width 240px * (x / 146)
+        .animated
+            left 539px * (x / 146) + offset
+    [data-animate=title-3]
+        left 745px  * (x / 146) + offset
+        .animated
+            left 240px  * (x / 146) + offset
+
+    [data-animate=title-1].animated
+        left 345px * (x / 146) + offset
+    [data-animate=title-2].animated
+        left 539px * (x / 146) + offset
+    [data-animate=title-3].animated
+        left 240px  * (x / 146) + offset
+    [data-animate=title-2].animated.final
+        width 554px * (x / 146)
+
+animate($h1xxs, 25)
+@media (min-width: 520px)
+    animate($h1xs, 10)
+@media (min-width: 768px)
+    animate($h1sm, 50)
+@media (min-width: 992px)
+    animate($h1md, 40)
+@media (min-width: 1200px)
+    animate($h1lg, 0)
+
+h1 span.spacer
+    width 40px
+//ANIMATION
+
+// ---------- NAV BEGIN ----------------
+
+nav, div.navbar-collapse
+    background-image: $dotted-green
+    font-family:'FuturaW01-MediumCondens';
+    text-transform uppercase
+
+nav.navbar
+    margin-bottom 0
+    border none
+
+nav.navbar-default .navbar-nav
+    li.active
+        a
+            color $green
+            background $manilla
+    li a
+        color $manilla;
+        height: 40px;
+
+nav.navbar-default .navbar-nav li.active a:hover,
+nav.navbar-default .navbar-nav li a:hover
+                background-color inherit
+                color $orange
+
+nav.navbar-default a.navbar-brand
+    color:red !important; //test to make sure that we are in smaller than 768
+@media (min-width: 768px)
+    nav.navbar-default a.navbar-brand
+        color:orange !important; //test to make sure that we are in smaller than 768
+@media (min-width: 992px)
+    nav.navbar-default a.navbar-brand
+        color:blue !important //test to make sure that we are in smaller than 768
+@media (min-width: 1200px)
+    nav.navbar-default a.navbar-brand
+        color:$manilla !important; //test to make sure that we are in smaller than 768
+
+@media (min-width: 768px)
+    nav.navbar-default
+        border 0
+        border-radius 0
+        border-bottom 10px solid $manilla
+        min-height 0
+        //height 45px
+        margin-bottom 0
+        a.navbar-brand
+            color $manilla;
+        .navbar-collapse.collapse
+            //height 45px !important
+        .navbar-nav
+            li.active
+                position relative
+                a
+                    background transparent
+                    padding 0 15px
+                    span
+                        background $manilla
+                        height 40px
+                        display inline-block
+                        padding-top 10px
+                /*a:hover
+                    background-color inherit
+                    color $orange*/
+            li
+                margin-top 10px
+            li a
+                padding 10px 25px
+                height: 40px;
+    #tab-left, #tab-right {
+        position:absolute;
+        width:30px;
+        height:40px;
+        top:0;
+        padding:0
+    }
+    #tab-left {
+        left:-15px;
+        background:url(../images/design/folderTabLeft.png);
+    }
+    #tab-right {
+        right:-15px;
+        background:url(../images/design/folderTabRight.png);
+    }
+
+// --------------------SECTION-----------------------------
+$main-padding = 10px
+
+main
+    padding $main-padding
+
+section
+    margin 20px auto
+    background-color transparent
+    padding-top 36px
+    padding-bottom 36px
+
+.round
+    background $white-noise
+    border-radius 50px
+    box-shadow 5px 5px 40px #888888
+    padding 40px
+.light
+    background $white-noise
+.manilla
+    background $manilla-noise
+.full-width
+    margin 0 $main-padding*-1px
+section
+    .row
+        padding 0 10px
+main
+    div.container, section.with-flag
+        position relative
+        margin-top 100px
+        padding 40px 10px
+        @media (min-width: 520px)
+            padding 50px
+
+// -----------------------GOAL----------------------------
+#goal-image
+    margin:auto
+    display:block
+    margin-bottom:10px;
+// -------------------Factory Farming---------------------
+$h2xxs = 25px
+$h2xs = 46px
+$h2sm = 57px
+$h2md = 78px
+$h2lg = 99px
+
+ffh2(size)
+    $image-height = size+20px
+    $image-top =(size/ 5px)+ ((size - 99px)/-20px)
+    h2
+        font-size size
+        //margin-top 0
+        margin-top (size/10px)+ ((size - 99px)/-10px)
+    header
+        height size+71px
+        img
+            height $image-height
+            top $image-top
+    hr
+        height size * .12px + ((size - 99px)/-20px)
+        margin 0
+    hr.bottom
+        top $image-height + $image-top
+
+ffh3(size)
+    $h2size = size*.36px//adjust from h2 to h3
+    $h3size = $h2size*.6px
+    if $h2size < 18px
+        $h2size = 18px
+    if $h3size < 16px
+        $h3size = 16px
+    h3, aside
+        font-size $h2size
+    h4, aside#issues
+        font-size $h3size
+    #the-facts
+        h3
+            font-size size
+ffh3($h2xs)
+@media (min-width: 520px)
+    ffh3($h2sm)
+@media (min-width: 768px)
+    ffh3($h2md)
+@media (min-width: 992px)
+    ffh3($h2lg)
+@media (min-width: 1200px)
+    ffh3($h2lg)
+
+#factory-farming
+    h2
+        color $green
+        font-size 5em
+        text-align center
+    ffh2($h2xxs)
+    ffh3($h2xs)
+    @media (min-width: 520px)
+        ffh2($h2xs)
+        ffh3($h2sm)
+    @media (min-width: 768px)
+        ffh2($h2sm)
+        ffh3($h2md)
+    @media (min-width: 992px)
+        ffh2($h2md)
+        ffh3($h2lg)
+    @media (min-width: 1200px)
+        ffh2($h2lg)
+        ffh3($h2lg)
+    header
+        position relative
+        background-image none
+        hr
+            background-image: $dotted-dark-green
+            padding 0
+            border 0
+        hr.bottom
+            position absolute
+            width 100%
+        img
+            position absolute
+        img.left
+            left 0
+        img.right
+            right 0
+    h3
+        text-align center
+    hr.money-politics
+        border-top none
+        height 46px
+        border-bottom 2px solid $grey
+        margin 150px $main-padding*-1px -20px $main-padding*-1px
+        background center $sinusoidal
+        background-size contain
+        @media (min-width: 768px)
+            height 91px
+    hr.money-politics.bottom
+        margin-top -20px
+        margin-bottom 110px
+        border-bottom none
+        border-top 2px solid $grey
+        background center $sinusoidal-flip
+        background-size contain
+
+    img.money-badge
+        margin -126px auto 15px auto
+        display block
+        height 154px
+        width 193px
+        @media (min-width: 768px)
+            height 308px
+            width 386px
+            margin -223px auto 30px auto;
+    ul li
+        font-family: 'Myriad W01 SmBd';
+    .money-politics
+        ul li
+            @media (min-width: 768px)
+                min-height 8em
+            @media (min-width: 992px)
+                min-height 7em
+    .personal
+        h3
+            color $grey
+
+//---------------------------SECTION FLAGS-------------------------
+h2.section-flag.center
+    background-image $section-flag-header-center
+    background-size contain
+    width 268px
+    height 48px
+    left 50%
+    margin-left -134px
+    top -48px
+    span
+        text-align center
+        margin-top 2px
+    @media (min-width: 520px)
+        margin-left -168px
+        width 339px
+        height 66px
+        top -56px
+        span
+            margin-top -1px
+    @media (min-width: 768px)
+        background-size auto
+        margin-left -282px
+        width 565px
+        height 96px
+        top -80px
+        span
+            text-align center
+            margin-top 4px
+h2.section-flag.left
+    background-image $section-flag-header-left
+    background-size contain
+    width 226px
+    height 44px
+    left 0
+    top -30px
+    span
+        margin 1px 0 0 80px
+    @media (min-width: 520px)
+        top -51px
+        width 339px
+        height 66px
+        span
+            margin 1px 0 0 120px
+    @media (min-width: 768px)
+        background-size auto
+        top -50px
+        left -60px
+        width 453px
+        height 89px
+        span
+            margin 3px 0 0 160px
+h2.section-flag
+    position absolute
+    background no-repeat
+    span
+        display block;
+        color $manilla
+        font-weight: normal;
+        font-size 24px
+        @media (min-width: 520px)
+            font-size 36px
+        @media (min-width: 768px)
+            font-size 48px
+
+
+//----------------------------BUTTONS-------------------------
+button
+    background-image $dotted-green
+    color $manilla
+    font-size: 1.2em;
+    font-family: 'FuturaW01-BoldCondensed 774890';
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    border: none;
+    letter-spacing: 1px;
+
+//---------------------------THE-FACTS-------------------------
+button:focus
+    outline none
+#the-facts
+    section
+        margin 0
+        padding 0
+    aside
+        font-family: 'FuturaW01-BoldCondensed 774890';
+        text-transform: uppercase;
+        color: #869c30;
+        text-align: center;
+        font-weight: normal;
+    aside#issues
+        color: #868079;
+        padding-bottom .5em;
+    button
+        display block
+        padding 1px
+        margin 0 auto 10px auto
+        width 100px
+        height 55px
+        font-size 1em
+    #fact-buttons
+        .col-sm-6
+            padding 0 13px
+        .col-xs-4
+            padding 0 1px
+    @media (min-width: 520px)
+        button
+            margin 0 auto 20px auto
+            width 130px
+    @media (min-width: 768px)
+        button
+            font-size 1em
+            width 100px
+    @media (min-width: 992px)
+        button
+            width 140px
+            height 80px
+            font-size 1.2em
+    @media (min-width: 1200px)
+        button
+            font-size 1.4em
+            width 160px
+            height 90px
+
+//--------------------------PLEDGE_NOW------------------------
+#pledge-now
+    .intro
+        p
+            text-align center
+    .inking
+        overflow hidden
+        position relative
+        margin 100px auto
+        .inkwell
+            height 100%
+        figure
+            overflow hidden
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image $dotted-green
+            h3
+                color #fff
+            img
+                display block
+        $figure-width-xs = 64px
+        $figure-width-md = 128px
+        figure.post-click
+            width $figure-width-xs
+            img
+                width 31px
+                margin 40px auto
+        .inner-pledge
+            margin-left $figure-width-xs - 40px
+        .question, .pledge-buttons
+            margin-left 10px
+        @media (min-width: 520px)
+            figure.post-click
+                width $figure-width-md
+                img
+                    width 62px
+                    margin 20px auto
+            .inner-pledge
+                margin-left $figure-width-md - 20px
+        .inner-pledge
+            position relative
+        .pledge-thought
+            font-style italic
+            font-weight bold
+            display none
+            background $manilla
+            border-radius 5px
+            padding 5px 10px
+    $select-width-xxs = 243px
+    $select-width-xs = 268px
+    $select-width-md = 318px
+    $select-width-lg = 468px
+    .styled-select select
+        background: transparent;
+        width $select-width-xxs
+        @media (min-width: 520px)
+            width $select-width-xs
+        @media (min-width: 768px)
+            width $select-width-sm
+        @media (min-width: 992px)
+            width $select-width-md
+        @media (min-width: 1200px)
+            width $select-width-lg
+        padding: 5px;
+        font-size: 16px;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        height: 34px;
+        text-transform:uppercase;
+        -webkit-appearance: none;
+        color $green
+    .styled-select select:focus
+        outline none
+    .styled-select
+        width ($select-width-xxs - 28px)
+        @media (min-width: 520px)
+            width ($select-width-xs - 28px)
+        @media (min-width: 768px)
+            width ($select-width-sm - 28px)
+        @media (min-width: 992px)
+            width $select-width-md - 28px
+        @media (min-width: 1200px)
+            width $select-width-lg - 28px
+        height: 34px;
+        overflow: hidden;
+        background $select-arrow no-repeat right $manilla;
+        border none
+        margin-bottom 20px
+    .pledge-buttons
+        margin-top 20px
+        button
+            box-shadow none
+            background $dark-green
+            margin 0 10px 10px 0
+        .social
+            height 70px
+            width 70px
+        .social-share
+            height 70px
+            float right
+            img
+                margin 5px 5px 5px 10px
+                width 15px
+                @media (min-width: 520px)
+                    width 22px
+        .social-buttons
+            float left
+            width 180px
+        .social-disclaimer
+            font-size .85em
+            line-height 1em
+            vertical-align top
+    .pledge-buttons.not-ready,
+    .pledge-buttons  .not-ready
+        opacity 0.3 //Not supported by IE8
+        pointer-events none
+//----------------------------Pledge-Card-------------------------
+.pledge-card
+    background-image $dotted-green
+    color $manilla
+    font-size: 1.2em;
+    font-family: 'FuturaW01-BoldCondensed 774890';
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    border: none;
+    letter-spacing: 1px;
+    text-align center
+    padding 10px
+    .title
+        text-transform uppercase
+        color $orange
+#contact
+    button
+        font-size 2em
+        padding 15px 30px
+    .email-button
+        float right
+        clear both
+    .right
+        float right
+    h2
+        clear both
+        float left
+        max-width 90%
+    .orange
+        color $orange

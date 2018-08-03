@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meatlessly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/72fce80e-47a9-46eb-8e89-e5e3c3132c32.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets/style.css" type='text/css'>
+  <link rel="shortcut icon" href="images/design/favicon.ico" />
+  <meta property="og:image" content="images/branding/meatlessly_Logo.png" />
+  <meta name="description" content="A fresh approach to an enduring problem: ending the destructive practices of large scale Animal Agriculture and Factory Farming. Meatlessly users are empowered to create their own customized public pledge to reduce their meat consumption and make their mark on a global issue.">
+  <meta name="keywords" content="Meatlessly, vegetarian, vegan, meatless, CAFO, factory farming, GHG, eat less meat, pledge">
+  <meta name="author" content="Gregory Schwedock">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-43660854-1', 'meatlessly.org');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item{{ theGoal }}">
+          <a class="nav-link" href="/">The Goal
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item{{ factoryFarming }}">
+          <a class="nav-link" href="/factoryFarming"> Factory Farming </a>
+        </li>
+        <li class="nav-item{{ theFacts }}">
+          <a class="nav-link" href="/thefacts">The Facts </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div id="outerHeaderWrapper">
+      <div class="container">
+        <div class="mobile-container">
+          <img id="logo" alt="Meatlessly.org Logo" src="images/design/logo.png">
+          <h1>
+            <span id="goforth">PLEDGE NOW TO Eat less meat and GO FORTH:</span>
+            <br/> {{!
+            <span class="">MEATLESSLY
+              <span id="org">.ORG</span>
+            </span>}}
+            <span data-animate="title-1">EAT</span>
+            <span data-animate="title-2">LESSLY
+              <span id="org">.ORG</span>
+            </span>
+            <span data-animate="title-3">MEAT</span>
+          </h1>
+        </div>{{! mobile container }}
+      </div>{{! container }}
+    </div>{{! outerHeaderWrapper }}
+  </header>
+  {{{body}}}
+  <main id="contact">
+    <section class="container round light">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h2 class="highlight">Questions? Comments? Suggestions?</h2>
+          <h2 class="highlight">Interested in workng with us?</h2>
+          <h2 class="highlight">Want to
+            <span class="orange">expand your audience</span> for a veg friendly company, product or restaurant on Meatlessly?</h2>
+          <a class="email-button" href="mailto:contact@meatlessly.org?Subject=Contacting%20Meatlessly&body=I%20Found%20your%20contact%20page%20and%20would%20like%20let%20you%20know"
+            target="_blank">
+            <button>Let Us Know!</button>
+          </a>
+        </div>{{!col}}
+        <div class="col-md-1"></div>
+      </div>{{!row}}
+    </section>
+  </main>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
+<script src="javascripts/animations.js"></script>
+
+</html>
